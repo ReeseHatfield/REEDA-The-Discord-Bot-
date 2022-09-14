@@ -1,0 +1,5 @@
+config.json
+temp/
+node_modules/
+cheatme.js
+buckme.js
