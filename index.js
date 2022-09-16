@@ -38,15 +38,18 @@ client.on('interactionCreate', async interaction => {
 
 client.login(token);
 
+//SCHEDULED STRINGS
+
+//Reese Eagle-Eyed Discord Assistant
 client.once("ready", () => {
 	console.log(`Online as ${client.user.tag}`);
 	  
-	let scheduledMessage = new cron.CronJob(' 0 9 0 0 1,3,5', () => {
-
+	let scheduledMessage = new cron.CronJob(' 0 9 1 0 1,3,5', () => {
+		//NOTE: I still need to make sure this CronJob time is correct
 	  	const guild = client.guilds.cache.get(guildId);
 		const channel = guild.channels.cache.get(testingChannelId);
 		channel.send('PIZZA DAY!');
-		
+
 	  });
 		  
 	  // When you want to start it, use:
