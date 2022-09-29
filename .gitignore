@@ -3,3 +3,4 @@ temp/
 node_modules/
 cheatme.js
 buckme.js
+openWeatherConfig.json
