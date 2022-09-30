@@ -1,6 +1,6 @@
 const { SlashCommandBuilder, EmbedBuilder, Embed, ReactionUserManager } = require('discord.js');
 const { default: axios } = require('axios');
-const { API_KEY } = require('../openWeatherConfig.json');
+const { API_KEY } = require('../config.json');
 
 if(!API_KEY){
     console.log(`Missing API_KEY`);
