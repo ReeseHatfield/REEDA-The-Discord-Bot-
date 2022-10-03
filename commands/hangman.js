@@ -4,9 +4,17 @@ const hangman = require('discord-hangman');
 module.exports = {
     data: new SlashCommandBuilder()
         .setName('hangman')
-        .setDescription('Play Hangman!'),
+        .setDescription('Play Hangman!')
+        .addStringOption(option =>
+            option.setName('word')
+                .setDescription('word')
+                .setRequired(false)),
     async execute(interaction){
-        await hangman.create(interaction, 'random')
-        return interaction.reply("Let's play!");
+        if(interaction.options.getString('word')){
+            await hangman.create(interaction, 'random', { word: interaction.options.getString('word') });
+        }
+        else{
+            await hangman.create(interaction, 'random');
+        }
     },
 };
