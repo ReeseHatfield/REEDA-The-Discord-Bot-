@@ -1,11 +1,13 @@
 const fs = require('node:fs');
 const path = require('node:path');
-const { Client, Collection, GatewayIntentBits } = require('discord.js');
+const { Client, Collection, GatewayIntentBits, IntentsBitField } = require('discord.js');
 const { token, guildId, testingChannelId } = require('./config.json');
-
 const cron = require('cron');
 
-const client = new Client({ intents: [GatewayIntentBits.Guilds] });
+const intents = new IntentsBitField([IntentsBitField.Flags.Guilds, IntentsBitField.Flags.GuildMessages, IntentsBitField.Flags.MessageContent, IntentsBitField.Flags.GuildMessageReactions, IntentsBitField.Flags.DirectMessages]);
+const client = new Client({ intents: [GatewayIntentBits.Guilds], intents });
+// const intents = new IntentsBitField([IntentsBitField.Flags.Guilds, IntentsBitField.Flags.GuildMessages, IntentsBitField.Flags.MessageContent, IntentsBitField.Flags.GuildMessageReactions, IntentsBitField.Flags.DirectMessages]);
+// const client = new Client({ intents });
 
 client.commands = new Collection();
 const commandsPath = path.join(__dirname, 'commands');
