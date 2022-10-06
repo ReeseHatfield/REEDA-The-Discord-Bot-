@@ -15,8 +15,10 @@
     "axios": "^0.27.2",
     "cron": "^2.1.0",
     "discord-hangman": "^1.4.0",
+    "discord-polls": "^1.1.1",
     "discord.js": "^14.3.0",
     "fetch": "^1.1.0",
+    "inspirational-quotes": "^2.0.1",
     "node-fetch": "^3.2.10",
     "request": "^2.88.2",
     "requests": "^0.3.0"

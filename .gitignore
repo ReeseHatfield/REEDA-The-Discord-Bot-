@@ -1,6 +1,7 @@
 config.json
 temp/
-node_modules/
+**/node_modules/*
+!**/node_modules/inspirational-quotes
 cheatme.js
 buckme.js
 openWeatherConfig.json
