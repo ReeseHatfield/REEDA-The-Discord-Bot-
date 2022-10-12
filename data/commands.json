@@ -1,0 +1,13 @@
+{
+    "commands":[
+        ["/coinflip","Flips a Coin"], 
+        ["/slots [bet?]", "Play the Slots"],
+        ["/echo [input]", "Make REEDA echo the input in the channel"],
+        ["hangman [word?", "Play Hangman with the specified word. If no word is specified, plays a random word"],
+        ["/help", "Displays a list of commands"],
+        ["/ping", "Pong!"],
+        ["/poll [topic] [options?]", "Makes a poll with the specified options"],
+        ["/quote", "Gives a random inspirational quotes"],
+        ["/weather [zipCode]", "Displays the weather at the specified zip code"]
+    ]
+}

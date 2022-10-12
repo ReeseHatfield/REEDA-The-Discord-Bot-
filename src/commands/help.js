@@ -1,8 +1,5 @@
 const { SlashCommandBuilder, EmbedBuilder } = require('discord.js');
-const fs = require('fs');
-const path = require('path');
-console.log(process.cwd());
-const markdown = require('markdown').markdown;
+const commandData = require('../../data/commands.json');
 
 
 module.exports = {
@@ -10,17 +7,19 @@ module.exports = {
         .setName('help')
         .setDescription('Provides a list of commands and arguments'),
     async execute(interaction){
-        const helpFile = fs.readFileSync(('./help.md'), (error, data) => {
-            if (error) {
-                console.error(error);
-                return;
-            }
-        });
-
         const embed = new EmbedBuilder()
             .setColor(0x0099FF)
+            .setTitle("Help")
+            .setDescription("Commands: ")
 
-
-        return interaction.reply({content: `${helpFile}`, ephemeral: false});
+        for(let i = 0; i < commandData.commands.length; i ++){
+            embed.addFields({
+                name: JSON.stringify(commandData.commands[i][0]), 
+                value: JSON.stringify(commandData.commands[i][1]), 
+                inline: false
+            });
+        }
+            
+        return interaction.reply({embeds: [embed], ephemeral: false});
     },
 };
