@@ -1,5 +1,5 @@
 const { SlashCommandBuilder } = require('discord.js');
-const { Monday, Tuesday, Wednesday, Thursday, Friday } = require('../schedule.json');
+const { Monday, Tuesday, Wednesday, Thursday, Friday } = require('../../data/schedule.json');
 
 module.exports = {
     data: new SlashCommandBuilder()

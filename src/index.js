@@ -3,7 +3,6 @@ const path = require('node:path');
 const { Client, Collection, GatewayIntentBits, IntentsBitField } = require('discord.js');
 const { token } = require('./config.json');
 
-
 //most of these IntentsBitFields are only needed for the hangman
 const intents = new IntentsBitField([IntentsBitField.Flags.Guilds, IntentsBitField.Flags.GuildMessages, IntentsBitField.Flags.MessageContent, IntentsBitField.Flags.GuildMessageReactions, IntentsBitField.Flags.DirectMessages]);
 const client = new Client({ intents: [GatewayIntentBits.Guilds], intents });
