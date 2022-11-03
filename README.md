@@ -1,6 +1,6 @@
 # REEDA
 ## Reese's Eagle Eyed Discord Assistant
-A fun and utility rich discord bot made with NodeJS using the DiscordJS api. 
+A fun and utility rich discord bot made with NodeJS using the DiscordJS API. 
 
 ![REEDA](REEDAPFP.png)
 
